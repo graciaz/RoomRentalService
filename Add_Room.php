@@ -1,3 +1,25 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+function conn(){
+        $conn = new mysqli("localhost", "root","", "hotel_management");
+        return $conn;
+    }
+session_start();
+
+//$user_id = $_POST['user_id'];
+//$room_id = $_POST['room_id'];
+//$role = $_POST['role'];
+//$RanPass = rand(100000,999999);
+//$conn = conn();
+//$sql = "INSERT INTO rooms (room_id) VALUES ('$room_id')";
+//$result = $conn->query($sql);
+//echo "userid = $user_id";
+//echo '<br/>';
+//echo "password = $RanPass";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +55,7 @@
     <form method="POST", action="addRoom.php">
   <div class="form-group">
     <label for="exampleFormControlInput1">เลขห้องพัก</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Room No.">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Room No." name="room_id">
   </div><br>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
