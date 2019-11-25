@@ -12,6 +12,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>จัดการห้องพัก(รายวัน)</title>
 </head>
 <body>
