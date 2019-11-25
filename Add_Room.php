@@ -71,7 +71,7 @@ session_start();
 </div>
 
        <center> <button type="submit" class="btn btn-dark">Submit</button>
-       <button type="button" class="btn btn-light">Back</button></center>
+       <button type="button" class="btn btn-light" href="index.html">Back</button></center>
 
 
 

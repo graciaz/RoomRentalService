@@ -1,13 +1,24 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+function conn(){
+        $conn = new mysqli("localhost", "root","", "hotel_management");
+        return $conn;
+    }
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>คำนวณค่าบริการห้องพัก</title>
+    <title>จัดการห้องพัก</title>
 </head>
 <body>
     <div class="col-sm"><br><br><br><br>
         <div class="card" style="width: 50%;">
           <div class="card-body">
-              <center><h2><span class="badge badge-secondary">คำนวณค่าบริการห้องพัก</span></h2></center>
+              <center><h2><span class="badge badge-secondary">จัดการห้องพัก</span></h2></center>
               <form method="POST" action="e_1.php">
                 <div class="form-group">
                     Room No.<br>
@@ -16,7 +27,7 @@
 
                 <center>
                     <button type="button" class="btn btn-dark">Submit</button>
-                    <button type="button" class="btn btn-light">Back</button>
+                    <button type="button" class="btn btn-light" href="index.html">Back</button>
                 </center>
             </form> 
         </div>

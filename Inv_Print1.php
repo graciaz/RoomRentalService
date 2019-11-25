@@ -1,8 +1,19 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+function conn(){
+        $conn = new mysqli("localhost", "root","", "hotel_management");
+        return $conn;
+    }
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ลบห้องพัก</title>
+    <title>พิมพ์ใบเสร็จ</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
 
@@ -29,16 +40,16 @@
 <div class="col-sm">
     <div class="card" style="width: 30%;">
   <div class="card-body">
-      <center><h2><span class="badge badge-secondary">ลบห้องพัก</span></h2></center>
+      <center><h2><span class="badge badge-secondary">พิมพ์ใบเสร็จ</span></h2></center>
     <form>
   <div class="form-group">
-    <label for="exampleFormControlInput1">เลขห้องพักที่ต้องการนำออกจากระบบ</label>
+    <label for="exampleFormControlInput1">เลขห้องพักที่ต้องการพิมพ์ใบเสร็จ</label>
     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Room No.">
   </div>
 
 
        <center> <button type="button" class="btn btn-dark">Submit</button>
-       <button type="button" class="btn btn-light">Back</button></center>
+       <button type="button" class="btn btn-light" href="index.html">Back</button></center>
 
 
 
