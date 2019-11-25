@@ -1,3 +1,14 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+function conn(){
+        $conn = new mysqli("localhost", "root","", "hotel_management");
+        return $conn;
+    }
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +30,7 @@
 
                 <center>
                     <button type="button" class="btn btn-dark">Submit</button>
-                    <button type="button" class="btn btn-light" href="index.html">Back</button>
+                    <a role="button" class="btn btn-light" href="index.html">Back</a>
                 </center>
 
             </form> 

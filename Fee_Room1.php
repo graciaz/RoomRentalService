@@ -12,6 +12,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>คำนวณค่าบริการห้องพัก</title>
 </head>
 <body>
@@ -27,7 +28,7 @@ session_start();
 
                 <center>
                     <button type="button" class="btn btn-dark">Submit</button>
-                    <button type="button" class="btn btn-light" href="index.html">Back</button>
+                    <a role="button" class="btn btn-light" href="index.html">Back</a>
                 </center>
             </form> 
         </div>

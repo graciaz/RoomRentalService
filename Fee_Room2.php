@@ -1,6 +1,18 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+function conn(){
+        $conn = new mysqli("localhost", "root","", "hotel_management");
+        return $conn;
+    }
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>คำนวณค่าบริการห้องพัก</title>
 </head>
 <body>
@@ -29,7 +41,7 @@
             </div>
                 <center>
                     <button type="button" class="btn btn-dark">Submit</button>
-                    <button type="button" class="btn btn-light" href="feeRoom1.html">Back</button>
+                    <a role="button" class="btn btn-light" href="index.html">Back</a>
                 </center>
             </form> 
         </div>

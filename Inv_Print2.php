@@ -1,3 +1,14 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "root";
+function conn(){
+        $conn = new mysqli("localhost", "root","", "hotel_management");
+        return $conn;
+    }
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
