@@ -8,6 +8,8 @@ function conn(){
 }
 
 $room_id = $_POST['room_id'];
+$elec_unit = $_POST['elec_unit'];
+$water_unit = $_POST['water_unit'];
 $conn = conn();
 $sql = "SELECT * FROM rooms WHERE room_id = $room_id";
 $result = $conn->query($sql);
@@ -23,25 +25,23 @@ $row = $result->fetch_assoc();
 </head>
 <body>
     <div class="col-sm"><br><br><br><br>
-        <div class="card" style="width: 50%;">
+        <div class="card" style="width: 80%;">
           <div class="card-body">
               <center><h2><span class="badge badge-secondary">คำนวณค่าบริการห้องพัก <br>ห้องพักหมายเลข <?=$row['room_id']?></span></h2></center>
               <br><br>
-              <form method="POST" action="e_1.php">
-                <h3>ชื่อผู้เช่า : <?=$row['customer_name']?><br>
-                    เบอร์โทรติดต่อ : <?=$row['tel']?></h3>
-                    <h2>จำนวนวันที่เข้าพัก : <?=$row['day_for_rent']?> วัน </h2>
-                    <br>
-                    <h3>บริการเพิ่มเติม</h3>
+              <form method="POST" action="#">
+                <div class="col-sm">
+                    <div class="card"><div class="card-body"><br><br><h2>ชื่อผู้เช่า : <?=$row['customer_name']?><br>
+                    เบอร์โทรติดต่อ : <?=$row['tel']?></h2><br><br></div></div>
+                    </div><br>
 
-                    <div class="form-group">
-    <label for="exampleFormControlInput1">จำนวนไฟฟ้าที่ใช้ (หน่วยละ 7 บาท)</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="หน่วย" name="elec_unit">
-        <label for="exampleFormControlInput1">จำนวนน้ำประปาที่ใช้ (หน่วยละ 20 บาท)</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="หน่วย" name="water_unit">
-  </div>
-
-                    <button type="submit" class="btn btn-dark">Submit</button>
+                    <h2>จำนวนวันที่เข้าพัก : <?=$row['day_for_rent']?> วัน (<?=$row['day_for_rent']*300?> บาท)</h2>
+                    <h4>ไฟฟ้า : <?=$elec_unit?> หน่วย (<?=$elec_unit*7?> บาท)</h4>
+                    <h4>น้ำประปา : <?=$water_unit?> หน่วย (<?=$water_unit*20?> บาท)</h4>
+<br><br><h1>รวมค่าบริการ <?=($row['day_for_rent']*300)+
+                            ($elec_unit*7)+
+                            ($water_unit*20)?> บาท</h1><br>
+                    <button type="button" class="btn btn-dark">พิมพ์ใบเสร็จ</button>
                     <a role="button" class="btn btn-light" href="index.html">Back</a>
                 </center>
             </form> 

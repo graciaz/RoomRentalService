@@ -26,6 +26,15 @@ session_start();
                     <input class="form-control" type="text" name="room_id">
                 </div>
 
+                <h3>บริการเพิ่มเติม</h3>
+
+                    <div class="form-group">
+    <label for="exampleFormControlInput1">จำนวนไฟฟ้าที่ใช้ (หน่วยละ 7 บาท)</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="หน่วย" name="elec_unit">
+        <label for="exampleFormControlInput1">จำนวนน้ำประปาที่ใช้ (หน่วยละ 20 บาท)</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="หน่วย" name="water_unit">
+  </div>
+
                 <center>
                     <button type="submit" class="btn btn-dark">Submit</button>
                     <a role="button" class="btn btn-light" href="index.html">Back</a>
