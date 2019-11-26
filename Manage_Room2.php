@@ -2,12 +2,20 @@
 $servername = "localhost";
 $username = "root";
 $password = "root";
+$dbname = "hotel_management";
+
+
 function conn(){
   $conn = new mysqli("localhost", "root","", "hotel_management");
   return $conn;
 }
 session_start();
+
+
+$room_id = $_POST['room_id'];
+
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -19,7 +27,7 @@ session_start();
   <div class="col-sm"><br><br><br><br>
     <div class="card" style="width: 50%;">
       <div class="card-body">
-        <center><h2><span class="badge badge-secondary">กรอกข้อมูลผู้เช่าห้อง(รายวัน)</span></h2></center>
+        <center><h2><span class="badge badge-secondary">กรอกข้อมูลผู้เช่าห้อง (หมายเลขห้อง <?php echo $room_id;?> )</span></h2></center>
         <form method="POST" action="db.php"> <!--DB Connect-->
           <div class="form-group">
             ชื่อผู้เช่า<br>
@@ -53,7 +61,7 @@ session_start();
               </div>
 
               <center>
-                <button type="button" class="btn btn-dark">Submit</button>
+                <button type="submit" class="btn btn-dark">Submit</button>
                 <a role="button" class="btn btn-light" href="index.html">Back</a>
               </center>
 

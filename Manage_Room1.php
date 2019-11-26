@@ -20,14 +20,14 @@ session_start();
         <div class="card" style="width: 50%;">
           <div class="card-body">
               <center><h2><span class="badge badge-secondary">จัดการห้องพัก</span></h2></center>
-              <form method="POST" action="e_1.php">
+              <form method="POST" action="Manage_Room2.php">
                 <div class="form-group">
                     Room No.<br>
-                    <input class="form-control" type="text" name="emp_id">
+                    <input class="form-control" type="text" name="room_id">
                 </div>
 
                 <center>
-                    <button type="button" class="btn btn-dark">Submit</button>
+                    <button type="submit" class="btn btn-dark">Submit</button>
                     <a role="button" class="btn btn-light" href="index.html">Back</a>
                 </center>
             </form> 
