@@ -55,12 +55,12 @@ session_start();
     <form method="POST", action="delroom.php">
   <div class="form-group">
     <label for="exampleFormControlInput1">เลขห้องพักที่ต้องการนำออกจากระบบ</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Room No.">
+    <input class="form-control" id="exampleFormControlInput1" placeholder="Room No." name="room_id">
   </div>
 
 
        <center> <button type="submit" class="btn btn-dark">Submit</button>
-       <button type="button" class="btn btn-light" href="index.html">Back</button></center>
+       <a role="button" class="btn btn-light" href="index.html">Back</a></center>
 
 
 

@@ -6,16 +6,6 @@ function conn(){
         $conn = new mysqli("localhost", "root","", "hotel_management");
         return $conn;
     }
-
-//$room_id = $_POST['room_id'];
-$answer = $_POST['exampleRadios'];
-if ($answer == 'option1' && $_SERVER['REQUEST_METHOD'] === 'POST'){
-  header("Location: manageRoomDaily.html");
-  die();
-}
-else{
-  echo "SE";
-}
 session_start();
 
 //$user_id = $_POST['user_id'];
@@ -81,8 +71,8 @@ session_start();
 </div>
 
        <center> <button type="submit" class="btn btn-dark">Submit</button>
-       <a class="btn btn-dark" href="index.html" role="button">Back</a></center>
-       
+       <a role="button" class="btn btn-light" href="index.html">Back</a></center>
+
 
 
 </form>

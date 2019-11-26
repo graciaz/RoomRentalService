@@ -6,9 +6,9 @@ $dbname = "hotel_management";
 
 
 function conn(){
-        $conn = new mysqli("localhost", "root", "", "hotel_management");
-        return $conn;
-    }
+  $conn = new mysqli("localhost", "root", "", "hotel_management");
+  return $conn;
+}
 session_start();
 
 //$user_id = $_POST['user_id'];
@@ -23,12 +23,25 @@ $result = $conn->query($sql);
 //echo "password = $RanPass";
 ?>
 <!DOCTYPE html>
-                  <html>
-                  <head>
-                  	<title></title>
-                  </head>
-                  <body>
-                  <br>
-                  <button type="button" class="btn btn-light" onclick="window.location.href='Del_Room.php';">Back</button>
-                  </body>
-                  </html>
+<html>
+<head>
+ <title></title>
+</head>
+<body>
+  <br><center>
+    <div class="card" style="width: 30%;">
+      <div class="card-body">
+        <div class="col-sm">
+          <center><br>
+            <h2>อัพเดทข้อมูลสำเร็จ !</h2><br>
+            <button type="button" class="btn btn-dark" onclick="window.location.href='index.html';">Back</button>
+          </center>
+        </div>
+      </div>
+    </div>
+  </center>
+</body>
+</html>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
