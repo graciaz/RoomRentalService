@@ -3,10 +3,16 @@ $servername = "localhost";
 $username = "root";
 $password = "root";
 function conn(){
-        $conn = new mysqli("localhost", "root","", "hotel_management");
-        return $conn;
-    }
-session_start();
+    $conn = new mysqli("localhost", "root","", "hotel_management");
+    return $conn;
+}
+
+$room_id = $_POST['room_id'];
+$conn = conn();
+$sql = "SELECT * FROM rooms WHERE room_id = $room_id";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+
 ?>
 
 <!DOCTYPE html>
@@ -19,28 +25,23 @@ session_start();
     <div class="col-sm"><br><br><br><br>
         <div class="card" style="width: 50%;">
           <div class="card-body">
-              <center><h2><span class="badge badge-secondary">คำนวณค่าบริการห้องพัก</span></h2></center>
+              <center><h2><span class="badge badge-secondary">คำนวณค่าบริการห้องพัก <br>ห้องพักหมายเลข <?=$row['room_id']?></span></h2></center>
               <br><br>
               <form method="POST" action="e_1.php">
-                <h3>ชื่อผู้เช่า : <!-- ดึงจาก DB--><br>
-                เบอร์โทรติดต่อ : <!-- ดึงจาก DB--></h3>
-                <h2>จำนวนวันที่เข้าพัก : <!-- ดึงจาก DB--> วัน </h2>
-<br>
-                <h3>บริการเพิ่มเติม</h3>
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" value="1">เพิ่มเตียง (+500)</label>
-            </div>
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" value="2">เพิ่ม Internet Hi-Speed (+100)</label>
-            </div>
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" value="3">เพิ่ม บุฟเฟต์อาหารเช้า (+100)</label>
-            </div>
-                <center>
-                    <button type="button" class="btn btn-dark">Submit</button>
+                <h3>ชื่อผู้เช่า : <?=$row['customer_name']?><br>
+                    เบอร์โทรติดต่อ : <?=$row['tel']?></h3>
+                    <h2>จำนวนวันที่เข้าพัก : <?=$row['day_for_rent']?> วัน </h2>
+                    <br>
+                    <h3>บริการเพิ่มเติม</h3>
+
+                    <div class="form-group">
+    <label for="exampleFormControlInput1">จำนวนไฟฟ้าที่ใช้ (หน่วยละ 7 บาท)</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="หน่วย" name="elec_unit">
+        <label for="exampleFormControlInput1">จำนวนน้ำประปาที่ใช้ (หน่วยละ 20 บาท)</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="หน่วย" name="water_unit">
+  </div>
+
+                    <button type="submit" class="btn btn-dark">Submit</button>
                     <a role="button" class="btn btn-light" href="index.html">Back</a>
                 </center>
             </form> 
