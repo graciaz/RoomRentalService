@@ -60,7 +60,7 @@ session_start();
 
 
        <center> <button type="submit" class="btn btn-dark">Submit</button>
-       <a role="button" class="btn btn-light" href="index.html">Back</a></center>
+       <button type="button" class="btn btn-light" href="index.html">Back</button></center>
 
 
 
