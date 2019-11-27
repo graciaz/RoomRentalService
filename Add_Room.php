@@ -58,14 +58,14 @@ session_start();
     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Room No." name="room_id">
   </div><br>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-  <label class="form-check-label" for="exampleRadios1">
+  <input class="form-check-input" type="radio" name="room_type" id="exampleRadios1" value="1" checked>
+  <label class="form-check-label">
     <h4>รายวัน</h4>
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-  <label class="form-check-label" for="exampleRadios2">
+  <input class="form-check-input" type="radio" name="room_type" id="exampleRadios2" value="2">
+  <label class="form-check-label">
     <h4>รายเดือน</h4>
   </label>
 </div>

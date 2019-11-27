@@ -13,10 +13,12 @@ session_start();
 
 //$user_id = $_POST['user_id'];
 $room_id = $_POST['room_id'];
+$room_type = $_POST['room_type'];
 //$role = $_POST['role'];
 //$RanPass = rand(100000,999999);
 $conn = conn();
-$sql = "INSERT INTO rooms (room_id) VALUES ('$room_id')";
+$sql = "INSERT INTO rooms (room_id, room_type) 
+VALUES ('$room_id', '$room_type')";
 $result = $conn->query($sql);
 //echo "userid = $user_id";
 //echo '<br/>';

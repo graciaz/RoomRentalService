@@ -20,11 +20,42 @@ session_start();
         <div class="card" style="width: 50%;">
           <div class="card-body">
               <center><h2><span class="badge badge-secondary">จัดการห้องพัก</span></h2></center>
-              <form method="POST" action="Manage_Room2.php">
+              <form method="POST" action="management.php">
                 <div class="form-group">
                     Room No.<br>
                     <input class="form-control" type="text" name="room_id">
                 </div>
+
+                <div class="form-group">
+            ชื่อผู้เช่า<br>
+            <input class="form-control" type="text" name="customer_name">
+          </div><div class="form-group">
+            เบอร์โทรติดต่อ<br>
+            <input class="form-control" type="text" name="tel">
+          </div>
+<br><br>
+          <center><h2><span class="badge badge-secondary">เลือกจำนวนวันที่เข้าพัก</span></h2></center>
+          <br>
+
+            <center>
+              <div class="form-group">
+                เข้าพักจำนวน : 
+                <select name="day_for_rent">
+                  <option value="1">1</option>}
+                  <option value="2">2</option>
+                  <option value="3">6</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                วัน<br><br>
+              </div>
 
                 <center>
                     <button type="submit" class="btn btn-dark">Submit</button>
