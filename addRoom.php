@@ -29,7 +29,7 @@ $result = $conn->query($sql);
 <head>
  <title></title>
 </head>
-<body>
+<body class="bg">
   <br><center>
   <div class="card" style="width: 30%;">
     <div class="card-body">
@@ -44,6 +44,19 @@ $result = $conn->query($sql);
   </center>
 </body>
 </html>
+<style>
+.bg {
+  /* The image used */
+  background-image: url("image/bg.jpg");
 
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

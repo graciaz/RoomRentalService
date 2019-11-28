@@ -15,7 +15,7 @@ session_start();
     <meta charset="UTF-8">
     <title>จัดการห้องพัก</title>
 </head>
-<body>
+<body class="bg">
     <div class="col-sm"><br><br><br><br>
         <div class="card" style="width: 50%;">
           <div class="card-body">
@@ -23,15 +23,15 @@ session_start();
               <form method="POST" action="management.php">
                 <div class="form-group">
                     Room No.<br>
-                    <input class="form-control" type="text" name="room_id">
+                    <input class="form-control" type="text" name="room_id" required>
                 </div>
 
                 <div class="form-group">
             ชื่อผู้เช่า<br>
-            <input class="form-control" type="text" name="customer_name">
+            <input class="form-control" type="text" name="customer_name" required>
           </div><div class="form-group">
             เบอร์โทรติดต่อ<br>
-            <input class="form-control" type="text" name="tel">
+            <input class="form-control" type="text" name="tel" required>
           </div>
 <br><br>
           <center><h2><span class="badge badge-secondary">เลือกจำนวนวันที่เข้าพัก</span></h2></center>
@@ -81,6 +81,19 @@ session_start();
 .card-body{
     position: relative;
 
+}
+
+.bg {
+  /* The image used */
+  background-image: url("image/bg.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 </style>

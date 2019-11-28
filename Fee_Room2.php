@@ -23,7 +23,7 @@ $row = $result->fetch_assoc();
     <meta charset="UTF-8">
     <title>คำนวณค่าบริการห้องพัก</title>
 </head>
-<body>
+<body class="bg">
     <div class="col-sm"><br><br><br><br>
         <div class="card" style="width: 80%;">
           <div class="card-body">
@@ -66,6 +66,18 @@ $row = $result->fetch_assoc();
 
 }
 
+.bg {
+  /* The image used */
+  background-image: url("image/bg.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 </style>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">

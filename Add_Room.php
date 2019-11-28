@@ -46,7 +46,7 @@ session_start();
     </style>
 
 </head>
-<body>
+<body class="bg">
 <br><br><br><br><br><br>
 <div class="col-sm">
     <div class="card" style="width: 30%;">
@@ -55,7 +55,7 @@ session_start();
     <form method="POST", action="addRoom.php">
   <div class="form-group">
     <label for="exampleFormControlInput1">เลขห้องพัก</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Room No." name="room_id">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Room No." name="room_id" required>
   </div><br>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="room_type" id="exampleRadios1" value="1" checked>
@@ -81,6 +81,19 @@ session_start();
   </div>
     </div>
 
-
 </body>
+<style>
+.bg {
+  /* The image used */
+  background-image: url("image/bg.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 </html>

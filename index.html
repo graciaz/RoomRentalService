@@ -4,8 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Manager Page</title>
 </head>
-<body>
-	<br><br><br><br>
+<body class="bg">
+	<br><br><br>
+	<div class="card border border-success p-3 mb-2 bg-light text-dark shadow-lg p-3 mb-5 bg-white rounded" style="width: 90%;"><br>
 	<center><h2><span class="badge badge-secondary">หน้าของผู้จัดการ</span></h2></center>
 	<div class="col-sm"><br><br><br><br>
 		<div class="container">
@@ -14,7 +15,16 @@
 					<div class="card-body">
 						<div class="col-sm">
 							<center><br>
-								<a class="btn btn-dark" href="Add_Room.php" role="button">เพิ่มห้องพัก</a>
+								<a class="btn btn-dark" href="Add_Room.php" role="button"><h3>เพิ่มห้องพัก</h3></a>
+							</center>
+						</div>
+					</div>
+				</div>
+				<div class="card" style="width: 30%;">
+					<div class="card-body">
+						<div class="col-sm">
+							<center>
+								<a class="btn btn-dark" href="Manage_Room1.php" role="button"><h3>จัดการตาราง<br>การเข้าพัก</h3></a>
 							</center>
 						</div>
 					</div>
@@ -23,16 +33,7 @@
 					<div class="card-body">
 						<div class="col-sm">
 							<center><br>
-								<a class="btn btn-dark" href="Manage_Room1.php" role="button">จัดการตารางการเข้าพัก</a>
-							</center>
-						</div>
-					</div>
-				</div>
-				<div class="card" style="width: 30%;">
-					<div class="card-body">
-						<div class="col-sm">
-							<center><br>
-								<a class="btn btn-dark" href="Del_Room.php" role="button">ลบห้องพัก</a>
+								<a class="btn btn-dark" href="Del_Room.php" role="button"><h3>ลบห้องพัก</h3></a>
 							</center>
 						</div>
 					</div>
@@ -45,8 +46,8 @@
 				<div class="card" style="width: 30%;">
 					<div class="card-body">
 						<div class="col-sm">
-							<center><br>
-								<a class="btn btn-dark" href="Fee_Room1.php" role="button">คำนวณค่าบริการห้องพัก</a>
+							<center>
+								<a class="btn btn-dark" href="Fee_Room1.php" role="button"><h3>คำนวณ<br>ค่าบริการห้องพัก</h3></a>
 							</center>
 						</div>
 					</div>
@@ -55,8 +56,8 @@
 		</div>
 
 	</div>
-
 </div>
+</div><br><br>
 </div>
 <!-- 	PHP
 
@@ -76,16 +77,37 @@
 .card{
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 10pt;
 	overflow: auto;
 
 	transform: scale(0.8);
-	margin-top: -60px;
+	margin-top: -50px;
+	background: rgba(122, 130, 136, 0.2)!important;
 
 }
 .card-body{
 	position: relative;
 
+}
+
+body, html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("image/bg.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.badge {
+	padding: 2rem;
 }
 
 </style>

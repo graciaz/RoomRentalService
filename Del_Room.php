@@ -42,11 +42,22 @@ session_start();
             position: relative;
 
         }
+.bg {
+  /* The image used */
+  background-image: url("image/bg.jpg");
 
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
     </style>
 
 </head>
-<body>
+<body class="bg">
 <br><br><br><br><br><br>
 <div class="col-sm">
     <div class="card" style="width: 30%;">
@@ -55,7 +66,7 @@ session_start();
     <form method="POST", action="delroom.php">
   <div class="form-group">
     <label for="exampleFormControlInput1">เลขห้องพักที่ต้องการนำออกจากระบบ</label>
-    <input class="form-control" id="exampleFormControlInput1" placeholder="Room No." name="room_id">
+    <input class="form-control" id="exampleFormControlInput1" placeholder="Room No." name="room_id" required>
   </div>
 
 

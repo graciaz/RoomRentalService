@@ -15,7 +15,7 @@ session_start();
     <meta charset="UTF-8">
     <title>คำนวณค่าบริการห้องพัก</title>
 </head>
-<body>
+<body class="bg"> 
     <div class="col-sm"><br><br><br><br>
         <div class="card" style="width: 50%;">
           <div class="card-body">
@@ -23,16 +23,16 @@ session_start();
               <form method="POST" action="Fee_Room2.php">
                 <div class="form-group">
                     Room No.<br>
-                    <input class="form-control" type="text" name="room_id">
+                    <input class="form-control" type="text" name="room_id" required>
                 </div>
 
                 <h3>บริการเพิ่มเติม</h3>
 
                     <div class="form-group">
     <label for="exampleFormControlInput1">จำนวนไฟฟ้าที่ใช้ (หน่วยละ 7 บาท)</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="หน่วย" name="elec_unit">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="หน่วย" name="elec_unit" required>
         <label for="exampleFormControlInput1">จำนวนน้ำประปาที่ใช้ (หน่วยละ 20 บาท)</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="หน่วย" name="water_unit">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="หน่วย" name="water_unit" required>
   </div>
 
                 <center>
@@ -60,6 +60,21 @@ session_start();
     position: relative;
 
 }
+
+
+.bg {
+  /* The image used */
+  background-image: url("image/bg.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 </style>
 
